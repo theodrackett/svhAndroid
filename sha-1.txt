@@ -1,0 +1,40 @@
+C:\Program Files (x86)\Java\jre1.8.0_181\bin>keytool -exportcert -alias androiddebugkey -keystore "C:\Users\dracketh\.android\debug.keystore" | "C:\Users\dracketh\Downloads\openssl-0.9.8k_X64\bin\openssl" sha1 -binary | "C:\Users\dracketh\Downloads\openssl-0.9.8k_X64\bin\openssl" base64
+Enter keystore password:  Ven10!Dor
+ga0RGNYHvNM5d0SLGQfpQWAPGJ8=
+
+C:\Program Files (x86)\Java\jre1.8.0_181\bin>keytool -exportcert -alias StreetVendorHelper -keystore C:\Users\dracketh\Downloads\StreetVendorHelper | C:\Users\dracketh\Downloads\openssl-0.9.8k_X64\bin\openssl sha1 -binary | C:\Users\dracketh\Downloads\openssl-0.9.8k_X64\bin\openssl base64
+kG3HShWgX/v77MSZlqi7/zOPuEs=
+
+
+C:\Program Files (x86)\Java\jre1.8.0_181\bin>keytool -exportcert -keystore C:\Users\dracketh\.android\debug.keystore -list -v
+Enter keystore password:
+Keystore type: jks
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: androiddebugkey
+Creation date: Feb 9, 2019
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: C=US, O=Android, CN=Android Debug
+Issuer: C=US, O=Android, CN=Android Debug
+Serial number: 1
+Valid from: Sat Feb 09 14:01:05 PST 2019 until: Mon Feb 01 14:01:05 PST 2049
+Certificate fingerprints:
+         MD5:  88:EE:C2:29:9E:5A:DD:73:D9:B8:D4:B8:B3:0E:79:06
+         SHA1: 14:A0:FA:EE:11:31:0D:88:8B:02:7E:59:C2:3F:85:E6:28:6C:82:C2
+         SHA256: 5F:27:33:75:67:65:9C:31:51:83:42:5A:8A:45:DB:8F:9C:7D:D8:73:79:5B:94:47:B1:67:05:61:6A:51:7D:18
+Signature algorithm name: SHA1withRSA
+Subject Public Key Algorithm: 1024-bit RSA key
+Version: 1
+
+
+*******************************************
+*******************************************
+
+client id:
+1067494647682-8b2vaedblahg9doih3g1vda5hbdog2l4.apps.googleusercontent.com
+client secret:
+UGQDuB6DCGgVaig0zYMESjup

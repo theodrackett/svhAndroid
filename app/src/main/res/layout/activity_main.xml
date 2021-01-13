@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:text="@string/street_vendor_helper"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_centerHorizontal="true"
+         />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search"
+        android:layout_above="@+id/bottom_layout"/>
+
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true">
+
+        <Button
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/button_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorAccent"
+                android:textAllCaps="false"
+                android:text="@string/select_location"
+                android:layout_marginTop="@dimen/common_margin" android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginEnd="@dimen/common_margin" android:layout_marginBottom="@dimen/common_margin"/>
+        <Button
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/button_auth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorAccent"
+                android:textAllCaps="false"
+                android:text="@string/sign_in"
+                android:layout_marginTop="@dimen/common_margin" android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginEnd="@dimen/common_margin" android:layout_marginBottom="@dimen/common_margin"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

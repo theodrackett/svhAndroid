@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.streetvendorhelper">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_rounder_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity
+                android:name=".ui.login.LoginActivity"
+                android:label="@string/title_activity_login"
+                android:parentActivityName=".MainActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value="com.streetvendorhelper.MainActivity"/>
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".activity.LocationActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+                android:name=".activity.EventDetailsActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+                android:name=".activity.EventEditorActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+                android:name=".activity.FeedbackActivity"
+                android:screenOrientation="portrait"/>
+
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyAk8ukOneB8ftARlhfalQ6eXmWITkV4_xc"/>
+        <meta-data
+                android:name="io.fabric.ApiKey"
+                android:value="9fb2a6e8b0714d426d26882dae257c079728fddf"/>
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="com.streetvendorhelper.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths"/>
+        </provider>
+    </application>
+
+</manifest>

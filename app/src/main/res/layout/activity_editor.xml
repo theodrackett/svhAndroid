@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/form"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/my_editor_toolbar"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:text="@string/street_vendor_helper"/>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical">
+
+            <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_margin"
+                    android:enabled="true"
+                    android:hint="@string/event_name"
+                    android:inputType="textPersonName"
+                    android:lines="1"
+                    android:textSize="@dimen/common_label"/>
+
+            <EditText
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/event_type"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <EditText
+                android:id="@+id/from_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/from_date"
+                android:inputType="date"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <EditText
+                android:id="@+id/to_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/to_date"
+                android:inputType="date"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/contact"
+                android:inputType="textPersonName"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <EditText
+                android:id="@+id/website"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/website"
+                android:inputType="textUri"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <EditText
+                android:id="@+id/street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/street"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/city"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <EditText
+                android:id="@+id/state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/state"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <EditText
+                android:id="@+id/country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:hint="@string/country"
+                android:lines="1"
+                android:text="@string/united_states"
+                android:textSize="@dimen/common_label" />
+
+
+            <EditText
+                android:id="@+id/your_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/your_name"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <EditText
+                android:id="@+id/frequency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:enabled="true"
+                android:hint="@string/frequency"
+                android:inputType="text"
+                android:lines="1"
+                android:textSize="@dimen/common_label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imagesList"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageButton
+                android:id="@+id/button_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/common_margin"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_photo_camera_white_24dp"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

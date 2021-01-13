@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:lines="1"
+            android:textSize="@dimen/common_label"
+            android:enabled="true"
+            android:hint="@string/your_name" android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginStart="@dimen/common_margin" android:layout_marginEnd="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"/>
+
+    <TextView
+            android:id="@+id/commentLabel"
+            android:layout_below="@+id/name"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/comment"
+            android:textSize="@dimen/common_label"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginStart="@dimen/common_margin" android:layout_marginEnd="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"/>
+
+    <com.willy.ratingbar.ScaleRatingBar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/comment"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="@dimen/common_margin"
+            app:srb_numStars="5"
+            app:srb_minimumStars="1"
+            app:srb_rating="3"
+            app:srb_starWidth="20dp"
+            app:srb_starHeight="20dp"
+            app:srb_starPadding="5dp"
+            app:srb_stepSize="1"
+            app:srb_isIndicator="false"
+            app:srb_clickable="true"
+            app:srb_scrollable="true"
+            app:srb_clearRatingEnabled="true"
+            app:srb_drawableEmpty="@drawable/empty_star"
+            app:srb_drawableFilled="@drawable/gold_star">
+    </com.willy.ratingbar.ScaleRatingBar>
+
+    <TextView
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            android:layout_below="@+id/comment"
+            android:textSize="@dimen/common_label"
+            android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginStart="@dimen/common_margin" android:layout_marginEnd="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"/>
+
+    <EditText
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@+id/commentLabel"
+            android:lines="6"
+            android:enabled="true"
+            android:textSize="@dimen/common_label"
+            android:hint="@string/enter_comment"
+            android:layout_marginTop="@dimen/common_margin" android:layout_marginStart="@dimen/common_margin"
+            android:layout_marginEnd="@dimen/common_margin" android:layout_marginBottom="@dimen/common_margin"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imagesList"
+        android:layout_below="@+id/rating"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imagesList"
+            android:textAllCaps="false"
+            android:background="@color/colorAccent"
+            android:text="@string/save" android:layout_marginTop="@dimen/common_margin"
+            android:layout_marginStart="@dimen/common_margin" android:layout_marginEnd="@dimen/common_margin"
+            android:layout_marginBottom="@dimen/common_margin"/>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true">
+
+
+
+        <ImageButton
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/button_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/white"
+                android:layout_margin="@dimen/common_margin"
+                android:textAllCaps="false"
+                android:src="@drawable/ic_photo_camera_white_24dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1067494647682",
+    "firebase_url": "https://vendor-helper.firebaseio.com",
+    "project_id": "vendor-helper",
+    "storage_bucket": "vendor-helper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067494647682:android:73811d6ed1e81160",
+        "android_client_info": {
+          "package_name": "com.streetvendorhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067494647682-24nqjp2jtc9fsf76es6o797s0dapdfj1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.streetvendorhelper",
+            "certificate_hash": "14a0faee11310d888b027e59c23f85e6286c82c2"
+          }
+        },
+        {
+          "client_id": "1067494647682-kvhkclkgv97d55jtk9ehovr2keu4qhnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm6UaaAd7HrHM80G5t2vuvkhptUMD2R6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067494647682-8b2vaedblahg9doih3g1vda5hbdog2l4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1067494647682-l2ojul0vutru8liktl83isnqctru6bn7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "bigchopaccessories.Vendor-Helper"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
