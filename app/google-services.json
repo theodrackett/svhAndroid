@@ -23,6 +23,58 @@
           }
         },
         {
+          "client_id": "1067494647682-5u09r9u2kskv5chlkpit7676mdpf5g9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.streetvendorhelper",
+            "certificate_hash": "b65702ed96b7409b7b367022ec1fd72a225c0abb"
+          }
+        },
+        {
+          "client_id": "1067494647682-kvhkclkgv97d55jtk9ehovr2keu4qhnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDm6UaaAd7HrHM80G5t2vuvkhptUMD2R6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067494647682-8b2vaedblahg9doih3g1vda5hbdog2l4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1067494647682-l2ojul0vutru8liktl83isnqctru6bn7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "bigchopaccessories.Vendor-Helper"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067494647682:android:e161b0d690e96db563d19b",
+        "android_client_info": {
+          "package_name": "com.streetvendorhelpernew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067494647682-fp1ncr0q0t87n3p6h7e3id7632jpumha.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.streetvendorhelpernew",
+            "certificate_hash": "b65702ed96b7409b7b367022ec1fd72a225c0abb"
+          }
+        },
+        {
           "client_id": "1067494647682-kvhkclkgv97d55jtk9ehovr2keu4qhnd.apps.googleusercontent.com",
           "client_type": 3
         }

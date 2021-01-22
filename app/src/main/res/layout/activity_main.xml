@@ -26,9 +26,95 @@
                 android:textColor="@color/colorAccent"
                 android:textSize="20sp"
                 android:text="@string/street_vendor_helper"/>
+
     </androidx.appcompat.widget.Toolbar>
 
+    <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/payed_layout"
+            android:layout_below="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/border"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+        <TextView
+                android:id="@+id/name"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/common_margin"
+                android:layout_marginStart="@dimen/common_margin" android:layout_marginEnd="@dimen/common_margin"
+                android:layout_marginBottom="@dimen/common_margin"/>
+
+        <com.willy.ratingbar.ScaleRatingBar
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/common_margin"
+                app:srb_numStars="5"
+                app:srb_minimumStars="0"
+                app:srb_rating="0"
+                app:srb_starWidth="12dp"
+                app:srb_starHeight="15dp"
+                app:srb_starPadding="1dp"
+                app:srb_stepSize="0.5"
+                app:srb_isIndicator="false"
+                app:srb_clickable="false"
+                app:srb_scrollable="true"
+                app:srb_clearRatingEnabled="true"
+                app:srb_drawableEmpty="@drawable/empty_star"
+                app:srb_drawableFilled="@drawable/gold_star">
+        </com.willy.ratingbar.ScaleRatingBar>
+
+        <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/common_margin" android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginEnd="@dimen/common_margin" android:layout_marginBottom="@dimen/common_margin"/>
+
+        <TextView
+                android:id="@+id/reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reviews"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/common_margin" android:layout_marginStart="@dimen/common_margin"
+                android:layout_marginEnd="@dimen/common_margin" android:layout_marginBottom="@dimen/common_margin"/>
+
+        <ImageView
+
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/aw2"
+                android:layout_marginRight="5dp"
+                android:scaleType="centerCrop"
+                android:layout_below="@+id/name"
+                android:layout_above="@+id/reviews"
+                />
+        <ImageView
+                android:layout_marginTop="30dp"
+                android:layout_width="70dp"
+                android:layout_height="50dp"
+                android:src="@drawable/paid"/>
+    </RelativeLayout>
     <SearchView
+            android:layout_below="@+id/payed_layout"
         android:id="@+id/search"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
@@ -36,50 +122,69 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border"
-        android:layout_below="@+id/my_toolbar"
+
         android:layout_centerHorizontal="true"
          />
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/search"
-        android:layout_above="@+id/bottom_layout"/>
+        android:layout_above="@+id/ad_layout"/>
 
 
-    <RelativeLayout
-        android:id="@+id/bottom_layout"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/colorPrimaryDark"
-        android:layout_alignParentBottom="true">
 
-        <Button
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:id="@+id/button_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:textColor="@color/colorAccent"
-                android:textAllCaps="false"
-                android:text="@string/select_location"
-                android:layout_marginTop="@dimen/common_margin" android:layout_marginStart="@dimen/common_margin"
-                android:layout_marginEnd="@dimen/common_margin" android:layout_marginBottom="@dimen/common_margin"/>
-        <Button
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:id="@+id/button_auth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:textColor="@color/colorAccent"
-                android:textAllCaps="false"
-                android:text="@string/sign_in"
-                android:layout_marginTop="@dimen/common_margin" android:layout_marginStart="@dimen/common_margin"
-                android:layout_marginEnd="@dimen/common_margin" android:layout_marginBottom="@dimen/common_margin"/>
+    <LinearLayout
+            android:id="@+id/ad_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+       <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+           <ImageView
+                   android:id="@+id/img_ad"
+                   android:layout_width="match_parent"
+                   android:src="@drawable/ad"
+                   android:padding="2dp"
+                   android:scaleType="fitCenter"
+                   android:layout_height="50dp"/>
+       </LinearLayout>
+        <RelativeLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="@color/colorPrimaryDark"
+                android:layout_alignParentBottom="true">
 
-    </RelativeLayout>
+            <Button
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/button_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/colorAccent"
+                    android:textAllCaps="false"
+                    android:text="@string/select_location"
+                    android:layout_marginTop="@dimen/common_margin" android:layout_marginStart="@dimen/common_margin"
+                    android:layout_marginEnd="@dimen/common_margin" android:layout_marginBottom="@dimen/common_margin"/>
+            <Button
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/button_auth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/colorAccent"
+                    android:textAllCaps="false"
+                    android:text="@string/sign_in"
+                    android:layout_marginTop="@dimen/common_margin" android:layout_marginStart="@dimen/common_margin"
+                    android:layout_marginEnd="@dimen/common_margin" android:layout_marginBottom="@dimen/common_margin"/>
 
+        </RelativeLayout>
+    </LinearLayout>
 </RelativeLayout>
